@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Est: 4hrs -->
+  <!-- Time: 6.5hrs -->
+</head>
+
+<body>
+  <div class="main-content">
+    <img class="logo" src="images/logo.svg" alt="Splitter logo">
+
+    <main class="main-grid">
+      <div class="input-section">
+        <label class="label" for="bill">Bill</label>
+        <div class="input-wrapper">
+          <img src="images/icon-dollar.svg" alt="">
+          <input type="number" name="bill" id="bill" placeholder="0">
+        </div>
+
+        <div class="margin-top">
+          <p class="label">Select Tip %</p>
+          <div class="tip-grid" id="tip-grid">
+            <button class="button button-tip" data-tip-percent="5">5%</button>
+            <button class="button button-tip" data-tip-percent="10">10%</button>
+            <button class="button button-tip button-active" data-tip-percent="15">15%</button>
+            <button class="button button-tip" data-tip-percent="25">25%</button>
+            <button class="button button-tip" data-tip-percent="50">50%</button>
+            <div class="input-wrapper">
+              <label class="visually-hidden" for="custom-tip">Custom</label>
+              <input type="number" name="tip-percent" id="custom-tip" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+
+        <div class="margin-top">
+          <div class="flex-row">
+            <label class="label" for="person-count">Number of People</label>
+            <span class="error-message hidden" id="person-error">Can't be zero</span>
+          </div>
+          <div class="input-wrapper">
+            <img src="images/icon-person.svg" alt="">
+            <input type="number" name="person-count" id="person-count" placeholder="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="output-section">
+        <div class="flex-row">
+          <p>Tip Amount<br>
+            <span class="subtle">/ person</span>
+          </p>
+          <div class="large-text" id="tip-per-person">$0.00</div>
+        </div>
+        <div class="flex-row">
+          <p>Total<br>
+            <span class="subtle">/ person</span>
+          </p>
+          <div class="large-text" id="total-per-person">$0.00</div>
+        </div>
+        <div class="margin-top"></div>
+        <button class="button button-reset">Reset</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/crsimpson5">Curtis&nbsp;Simpson</a>.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
