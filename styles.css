@@ -4,6 +4,7 @@
   --white: hsl(0, 0%, 100%);
   --green: hsl(173, 35%, 46%);
   --red: hsl(7, 52%, 56%);
+  --drop-shadow: hsl(183 100% 15% / 10%);
 
   --cyan-100: hsl(189, 41%, 97%);
   --cyan-200: hsl(185, 41%, 84%);
@@ -236,6 +237,7 @@ input::-webkit-inner-spin-button {
   .main-grid {
     --padding: 2em;
     border-radius: 1.5em;
+    box-shadow: var(--drop-shadow) 0 10px 22px -10px;
   }
 
   .input-section {
